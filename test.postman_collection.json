@@ -1,0 +1,594 @@
+{
+	"info": {
+		"_postman_id": "84dc0075-434c-4d4a-a761-924837482610",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23314905"
+	},
+	"item": [
+		{
+			"name": "/customer/insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_pan\": \"JhonChenamail@mail.com\",\r\n    \"customer_name\": \"Smack Down\",\r\n    \"petugas_rekam\": \"Toba\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/customer/insert",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/customer/get-data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"get-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer get by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/customer/get-data-id/8327732737474787324",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"get-data-id",
+						"8327732737474787324"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "merchant byId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/customer/get-data-id/8327732737474787324",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"get-data-id",
+						"8327732737474787324"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "merchant create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/profile/GetAll",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"profile",
+						"GetAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "merchant get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ya29.a0AeXRPp5IpaDru7L6GAosi1hybzyhTzY7wDXAl9XetbMGBOq6zFWEPVLmew7Vykd0rf1LI_p5v3vZo_MbzXMuWELKpudy3tt2f-KmxVhCpoxxMUjYRkQtMvCGp-OIcSBW239QCeKfHgjzfMFk9kGIuFzf1dkq329qBwKAHHd9aCgYKAaESARASFQHGX2Mi-mJhlKOoVIFOnAfV7pKavw0175",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/merchant/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"merchant",
+						"list"
+					],
+					"query": [
+						{
+							"key": "profileId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ya29.a0AeXRPp7x9NjuVickgG5M9g4gU2yAHRwo7XMOZzUhbt97HeRXoUtyQxiIQHs5o3gWlNgucwMGXzpk1MrKjfG281ROu1u0tPqttirbNeWPGOXgdIGjvhSLbhFqtgp_4zUTBqGF7ZS9GmfOx7OyXIUbR4uFbBxsvmCOPCeqZL0WaCgYKAccSARASFQHGX2Mi2qb3_798KxrG9hZ2-97XHg0175",
+						"type": "text"
+					},
+					{
+						"key": "X-Signature",
+						"value": "hc6KcYZ4O00/xgNm62Gv5UY4/G8/81diBwejI8jwiWZFDJg3zRyFVoIDSht181JzwovXpmaeg4to5MBUJm95BQ==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request_id\": \"aefa7b68dc02443681a2123da02405b4\",\r\n    \"customer_pan\": \"8327732737474787324\",\r\n    \"amount\": \"150000.75\",\r\n    \"transaction_datetime\": \"2024-03-01T14:30:00Z\",\r\n    \"rrn\": \"987654321012\",\r\n    \"bill_number\": \"INV123456\",\r\n    \"customer_name\": \"John Doe\",\r\n    \"merchant_id\": \"cc655cf4-f98b-44a6-be4c-bd258c087551\",\r\n    \"merchant_name\": \"Toko Elektronik ABC\",\r\n    \"merchant_city\": \"Jakarta\",\r\n    \"currency_code\": \"IDR\",\r\n    \"payment_status\": \"Completed\",\r\n    \"payment_description\": \"Pembayaran berhasil\",\r\n    \"petugas_rekam\":\"ADMIN\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/transaction-notification",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"transaction-notification"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "invalid access token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0AeXRPp76NZu2lU9zVAdI57bU1l_9mVhVukiVbIXuyK44VndrerePB1KJbeBB871hw4xXaQdjrQtvh4gZwlKBwHKAJokji7Jsc4ezqxfJCKqfiRmEfbB7keNLtrZee9Xs2SGw9m285Y0NqL0-dh3p8TwFX_AB1AtSJpphTR_xaCgYKAbkSARASFQHGX2Mi3P0kA1GbflRzbWa-bZ5BQw",
+								"type": "text"
+							},
+							{
+								"key": "X-Signature",
+								"value": "hc6KcYZ4O00/xgNm62Gv5UY4/G8/81diBwejI8jwiWZFDJg3zRyFVoIDSht181JzwovXpmaeg4to5MBUJm95BQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"request_id\": \"aefa7b68dc02443681a2123da02405b4\",\r\n    \"customer_pan\": \"8327732737474787324\",\r\n    \"amount\": \"150000.75\",\r\n    \"transaction_datetime\": \"2024-03-01T14:30:00Z\",\r\n    \"rrn\": \"987654321012\",\r\n    \"bill_number\": \"INV123456\",\r\n    \"customer_name\": \"John Doe\",\r\n    \"merchant_id\": \"cc655cf4-f98b-44a6-be4c-bd258c087551\",\r\n    \"merchant_name\": \"Toko Elektronik ABC\",\r\n    \"merchant_city\": \"Jakarta\",\r\n    \"currency_code\": \"IDR\",\r\n    \"payment_status\": \"Completed\",\r\n    \"payment_description\": \"Pembayaran berhasil\",\r\n    \"petugas_rekam\":\"ADMIN\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/transaction-notification",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"transaction-notification"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 09:18:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Invalid access token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "transaction status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Signature",
+						"value": "BasNPV+zU3sszHRlnoapSURY2YApYQA1Mfijl9nC5jYto6sM5MsSF3al81YQfKrplPcw6x/Vm72KIw8DdAQt3A==",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ya29.a0AeXRPp7IfaK33idVbfp6VSgPm_ZTMDs2ZuWt3Ren8i818lo3_JKfzKhWntJurBcc8aNxJZV_VFwyMHEqA6xSu_wgPsK2CV1uAmIEyqPQWW8y0sUM9p4DYEEbFGBflpwOaO8PXyku_gRfkjoTVmTNFnmYZoROrMna756LsuU6aCgYKAZ8SARMSFQHGX2MilDfDaqKrFgHQ6UneNWZamA0175",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request_id\":\"a76b70b0ceb043e583330f509f6236e6\",\r\n    \"bill_number\":\"INV123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/check-status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"check-status"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sukses",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Signature",
+								"value": "BasNPV+zU3sszHRlnoapSURY2YApYQA1Mfijl9nC5jYto6sM5MsSF3al81YQfKrplPcw6x/Vm72KIw8DdAQt3A==",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0AeXRPp7IfaK33idVbfp6VSgPm_ZTMDs2ZuWt3Ren8i818lo3_JKfzKhWntJurBcc8aNxJZV_VFwyMHEqA6xSu_wgPsK2CV1uAmIEyqPQWW8y0sUM9p4DYEEbFGBflpwOaO8PXyku_gRfkjoTVmTNFnmYZoROrMna756LsuU6aCgYKAZ8SARMSFQHGX2MilDfDaqKrFgHQ6UneNWZamA0175",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"request_id\":\"a76b70b0ceb043e583330f509f6236e6\",\r\n    \"bill_number\":\"INV123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/check-status",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"check-status"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:34:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "472"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"200\",\n    \"message\": \"Success\",\n    \"request_id\": \"a76b70b0ceb043e583330f509f6236e6\",\n    \"customer_pan\": \"8327732737474787324\",\n    \"amount\": \"150000.75\",\n    \"transaction_datetime\": \"2024-03-01T14:30:00Z\",\n    \"rrn\": \"987654321012\",\n    \"bill_number\": \"INV123456\",\n    \"customer_name\": \"John Doe\",\n    \"merchant_id\": \"cc655cf4-f98b-44a6-be4c-bd258c087551\",\n    \"merchant_name\": \"Toko Elektronik ABC\",\n    \"merchant_city\": \"Jakarta\",\n    \"currency_code\": \"IDR\",\n    \"payment_status\": \"Completed\",\n    \"payment_description\": \"Pembayaran berhasil\"\n}"
+				},
+				{
+					"name": "invalid credential",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Signature",
+								"value": "BasNPV+zU3sszHRlnoapSURY2YApYQA1Mfijl9nC5jYto6sM5MsSF3al81YQfKrplPcw6x/Vm72KIw8DdAQt3A==",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0AeXRPp7IfaK33idVbfp6VSgPm_ZTMDs2ZuWt3Ren8i818lo3_JKfzKhWntJurBcc8aNxJZV_VFwyMHEqA6xSu_wgPsK2CV1uAmIEyqPQWW8y0sUM9p4DYEEbFGBflpwOaO8PXyku_gRfkjoTVmTNFnmYZoROrMna756LsuU6aCgYKAZ8SARMSFQHGX2MilDfDaqKrFgHQ6UneNWZamA0175",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"request_id\":\"a76b70b0ceb043e583330f509f6236e6\",\r\n    \"bill_number\":\"INV12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/check-status",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"check-status"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:34:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"ERROR_CREDENTIAL_NOT_VALID\"\n}"
+				},
+				{
+					"name": "invalid access token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Signature",
+								"value": "BasNPV+zU3sszHRlnoapSURY2YApYQA1Mfijl9nC5jYto6sM5MsSF3al81YQfKrplPcw6x/Vm72KIw8DdAQt3A==",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0AeXRPp7IfaK33idVbfp6VSgPm_ZTMDs2ZuWt3Ren8i818lo3_JKfzKhWntJurBcc8aNxJZV_VFwyMHEqA6xSu_wgPsK2CV1AmIEyqPQWW8y0sUM9p4DYEEbFGBflpwOaO8PXyku_gRfkjoTVmTNFnmYZoROrMna756LsuU6aCgYKAZ8SARMSFQHGX2MilDfDaqKrFgHQ6UneNWZamA0175",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"request_id\":\"a76b70b0ceb043e583330f509f6236e6\",\r\n    \"bill_number\":\"INV123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/check-status",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"check-status"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:35:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Invalid access token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "transaction list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ya29.a0AeXRPp7JHvDwXUOQNVJKMIWH1QZpm-yqUP4uCucy8EdbK_t092lNaCXkfjh_OqM1CJMs0UN1Wt23jYepOlegoAOCxoZ3sIsN5oecWB7V_VXEG4WkOtH92tKAfnwUQaQYotpgQVYbha2y1f_c5j3TwebVGE23uO2XbTOAEkabaCgYKAeASARASFQHGX2MimSdaS8sRC1cNQE6YPReBqg0175",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/transaction-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"transaction-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oauth",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
