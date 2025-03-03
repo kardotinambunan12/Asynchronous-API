@@ -38,7 +38,7 @@ func (service *transactionServiceImpl) TransactionList(ctx *fiber.Ctx) (*model.W
 	case res := <-ch:
 		return res, nil
 	case err := <-errCh:
-		return nil, errors.New("Failed to get data customer: " + err.Error())
+		return nil, errors.New("Failed to get data Transaction: " + err.Error())
 	}
 }
 
