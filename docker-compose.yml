@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_DATABASE: spe_test
+    networks:
+      - mynetwork
+
+  app:
+    build: .
+    container_name: my-app
+    environment:
+      - URL_DATABASE=root@tcp(mysql-container:3306)/spe_test
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
